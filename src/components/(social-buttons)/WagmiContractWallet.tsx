@@ -24,7 +24,7 @@ import { publicProvider } from "wagmi/providers/public";
 
 const connector = new GoogleSocialWalletConnector({
   options: {
-    projectId: process.env.ZERODEV_PROJECT_ID as string,
+    projectId: process.env.NEXT_PUBLIC_ZERODEV_PROJECT_ID as string,
   },
 });
 
@@ -56,7 +56,7 @@ const WagmiContractWallet = () => {
       await connect({
         connector: new GoogleSocialWalletConnector({
           options: {
-            projectId: process.env.ZERODEV_PROJECT_ID as string,
+            projectId: process.env.NEXT_PUBLIC_ZERODEV_PROJECT_ID as string,
           },
         }),
       });

@@ -15,8 +15,8 @@ const EtherApiContractWallet = () => {
   const createWallet = async () => {
     setLoading(true);
     const signer = await getZeroDevSigner({
-      projectId: process.env.ZERODEV_PROJECT_ID as string,
-      owner: await getSocialWalletOwner(process.env.ZERODEV_PROJECT_ID as string, socialWallet),
+      projectId: process.env.NEXT_PUBLIC_ZERODEV_PROJECT_ID as string,
+      owner: await getSocialWalletOwner(process.env.NEXT_PUBLIC_ZERODEV_PROJECT_ID as string, socialWallet),
     });
     setAddress(await signer.getAddress());
     setLoading(false);
