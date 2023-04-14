@@ -24,7 +24,7 @@ import { publicProvider } from "wagmi/providers/public";
 
 const connector = new GoogleSocialWalletConnector({
   options: {
-    projectId: process.env.ZERODEV_PROJECT_ID,
+    projectId: process.env.ZERODEV_PROJECT_ID as string,
   },
 });
 
