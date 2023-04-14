@@ -16,7 +16,7 @@ const { chains, provider } = configureChains(
 );
 
 const { connectors } = getDefaultWallets({
-  appName: "My RainbowKit App",
+  appName: "Web 3 Contract Wallet RainbowKit App",
   chains,
 });
 

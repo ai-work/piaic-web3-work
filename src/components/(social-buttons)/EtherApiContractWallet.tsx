@@ -4,8 +4,6 @@ import { getZeroDevSigner, getSocialWalletOwner } from "@zerodevapp/sdk";
 
 import { SocialWallet } from "@zerodevapp/social-wallet";
 
-const defaultProjectId = "2577b65b-785b-4af4-a917-7356e9947849";
-
 const EtherApiContractWallet = () => {
   const [address, setAddress] = useState("");
   const [loading, setLoading] = useState(false);
@@ -17,8 +15,8 @@ const EtherApiContractWallet = () => {
   const createWallet = async () => {
     setLoading(true);
     const signer = await getZeroDevSigner({
-      projectId: defaultProjectId,
-      owner: await getSocialWalletOwner(defaultProjectId, socialWallet),
+      projectId: process.env.ZERODEV_PROJECT_ID,
+      owner: await getSocialWalletOwner(process.env.ZERODEV_PROJECT_ID, socialWallet),
     });
     setAddress(await signer.getAddress());
     setLoading(false);

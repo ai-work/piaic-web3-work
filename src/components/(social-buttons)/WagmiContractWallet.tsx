@@ -22,11 +22,9 @@ import { polygonMumbai } from "wagmi/chains";
 
 import { publicProvider } from "wagmi/providers/public";
 
-const defaultProjectId = "2577b65b-785b-4af4-a917-7356e9947849";
-
 const connector = new GoogleSocialWalletConnector({
   options: {
-    projectId: defaultProjectId,
+    projectId: process.env.ZERODEV_PROJECT_ID,
   },
 });
 
