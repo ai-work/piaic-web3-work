@@ -56,7 +56,7 @@ const WagmiContractWallet = () => {
       await connect({
         connector: new GoogleSocialWalletConnector({
           options: {
-            projectId: defaultProjectId,
+            projectId: process.env.ZERODEV_PROJECT_ID as string,
           },
         }),
       });
